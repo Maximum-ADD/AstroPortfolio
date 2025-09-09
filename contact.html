@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Adrian Draxl</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="planet-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="planet-page">
+    <!-- Starfield Background -->
+    <div id="starfield-1" class="starfield layer-1"></div>
+    <div id="starfield-2" class="starfield layer-2"></div>
+    <div id="starfield-3" class="starfield layer-3"></div>
+
+    <!-- Audio Controls -->
+    <div class="audio-controls">
+        <button id="audio-toggle" class="audio-btn">
+            <span id="audio-icon">🔊</span>
+        </button>
+    </div>
+
+    <!-- Sliding Doors -->
+    <div id="sliding-doors" class="doors active open">
+        <div class="door door-left"></div>
+        <div class="door door-right"></div>
+    </div>
+
+    <!-- Main Cockpit Frame -->
+    <div class="cockpit-frame">
+        <!-- Main Viewport -->
+        <div class="viewport">
+            <div class="planet-content">
+                <!-- Planet Header -->
+                <div class="planet-header">
+                    <div class="planet contact-planet">
+                        <div class="planet-highlight"></div>
+                        <div class="planet-icon">📡</div>
+                    </div>
+                    <h1>CONTACT PLANET</h1>
+                    <p>Communication Hub & Message Center</p>
+                </div>
+
+                <!-- Contact Content -->
+                <div class="content-container">
+                    <!-- Communication Channels -->
+                    <div class="contact-section">
+                        <h2>📡 COMMUNICATION CHANNELS</h2>
+                        <div class="channels-grid">
+                            <div class="channel-card">
+                                <div class="channel-icon">📧</div>
+                                <h3>Email Transmission</h3>
+                                <p class="channel-value">adrian.draxl@students.wits.ac.za</p>
+                                <p class="channel-desc">Primary communication channel</p>
+                            </div>
+                            
+                            <div class="channel-card">
+                                <div class="channel-icon">💬</div>
+                                <h3>Emergency Contact</h3>
+                                <p class="channel-value">Available upon request</p>
+                                <p class="channel-desc">For urgent mission communications</p>
+                            </div>
+                            
+                            <div class="channel-card">
+                                <div class="channel-icon">📍</div>
+                                <h3>Location Beacon</h3>
+                                <p class="channel-value">Johannesburg, South Africa</p>
+                                <p class="channel-desc">Current orbital coordinates</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Message Transmission Form -->
+                    <div class="contact-section">
+                        <h2>📤 MESSAGE TRANSMISSION</h2>
+                        <form id="contact-form" class="transmission-form">
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label>SENDER IDENTIFICATION</label>
+                                    <div class="input-container">
+                                        <span class="input-icon">👤</span>
+                                        <input type="text" id="sender-name" placeholder="Your Name" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-field">
+                                    <label>COMMUNICATION FREQUENCY</label>
+                                    <div class="input-container">
+                                        <span class="input-icon">📧</span>
+                                        <input type="email" id="sender-email" placeholder="your.email@domain.com" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-field">
+                                <label>MESSAGE CONTENT</label>
+                                <div class="input-container">
+                                    <span class="input-icon textarea-icon">💬</span>
+                                    <textarea id="message-content" placeholder="Enter your message for transmission to Mission Control..." required></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="form-submit">
+                                <button type="submit" id="transmit-btn" class="transmit-button">
+                                    <span class="btn-icon">📤</span>
+                                    <span class="btn-text">SEND TRANSMISSION</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Mission Control Notice -->
+                    <div class="contact-section">
+                        <h2>📋 MISSION CONTROL NOTICE</h2>
+                        <div class="notice-content">
+                            <p>All transmissions are monitored by Mission Control for quality and training purposes. 
+                            Response time varies based on current mission parameters and system availability. 
+                            Priority will be given to collaboration opportunities and technical discussions.</p>
+                            
+                            <div class="transmission-details">
+                                <div class="detail-item">
+                                    <strong>STATUS:</strong> Communication systems operational.
+                                </div>
+                                <div class="detail-item">
+                                    <strong>RESPONSE TIME:</strong> 24-48 hours standard protocol.
+                                </div>
+                                <div class="detail-item">
+                                    <strong>ENCRYPTION:</strong> All messages secured via quantum encryption.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="bottom-nav">
+            <button id="return-hub" class="return-btn">
+                <span>‹</span> RETURN TO HUB
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="planet-script.js"></script>
+</body>
+</html>

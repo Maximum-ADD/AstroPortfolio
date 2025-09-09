@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Adrian Draxl</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="planet-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="planet-page">
+    <!-- Starfield Background -->
+    <div id="starfield-1" class="starfield layer-1"></div>
+    <div id="starfield-2" class="starfield layer-2"></div>
+    <div id="starfield-3" class="starfield layer-3"></div>
+
+    <!-- Audio Controls -->
+    <div class="audio-controls">
+        <button id="audio-toggle" class="audio-btn">
+            <span id="audio-icon">🔊</span>
+        </button>
+    </div>
+
+    <!-- Sliding Doors -->
+    <div id="sliding-doors" class="doors active open">
+        <div class="door door-left"></div>
+        <div class="door door-right"></div>
+    </div>
+
+    <!-- Main Cockpit Frame -->
+    <div class="cockpit-frame">
+        <!-- Main Viewport -->
+        <div class="viewport">
+            <div class="planet-content">
+                <!-- Planet Header -->
+                <div class="planet-header">
+                    <div class="planet about-planet">
+                        <div class="planet-highlight"></div>
+                        <div class="planet-icon">👤</div>
+                    </div>
+                    <h1 id="section-title">PERSONAL INFO</h1>
+                    <p id="section-subtitle">Mission Commander Details</p>
+                    <div class="section-indicators">
+                        <div class="indicator active" data-section="0"></div>
+                        <div class="indicator" data-section="1"></div>
+                        <div class="indicator" data-section="2"></div>
+                        <div class="indicator" data-section="3"></div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Content Container -->
+                <div class="content-container" id="content-container">
+                    <!-- Section 0: Personal Info -->
+                    <div class="content-section active" data-section="0">
+                        <div class="info-card">
+                            <h2>👤 MISSION COMMANDER</h2>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <div class="info-icon">🎓</div>
+                                    <div class="info-details">
+                                        <h3>Adrian Draxl</h3>
+                                        <p>Computer Science Student</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">📍</div>
+                                    <div class="info-details">
+                                        <h3>Base of Operations</h3>
+                                        <p>University of the Witwatersrand, Johannesburg</p>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-icon">📅</div>
+                                    <div class="info-details">
+                                        <h3>Mission Timeline</h3>
+                                        <p>Currently pursuing Bachelor's in Computer Science</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 1: Education & Training -->
+                    <div class="content-section" data-section="1">
+                        <div class="info-card">
+                            <h2>🎓 ACADEMIC CREDENTIALS</h2>
+                            <div class="education-timeline">
+                                <div class="timeline-item primary">
+                                    <h3>Bachelor of Science - Computer Science</h3>
+                                    <p>University of the Witwatersrand</p>
+                                    <span class="timeline-date">2022 - Present</span>
+                                </div>
+                                <div class="timeline-item secondary">
+                                    <h3>Core Specializations</h3>
+                                    <ul>
+                                        <li>Software Engineering & Development</li>
+                                        <li>Data Structures & Algorithms</li>
+                                        <li>Database Design & Management</li>
+                                        <li>Web Technologies & Frameworks</li>
+                                    </ul>
+                                </div>
+                                <div class="timeline-item accent">
+                                    <h3>Advanced Training Modules</h3>
+                                    <ul>
+                                        <li>Machine Learning & AI Fundamentals</li>
+                                        <li>Network Security & Cybersecurity</li>
+                                        <li>Mobile Application Development</li>
+                                        <li>Cloud Computing & DevOps</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Interests & Hobbies -->
+                    <div class="content-section" data-section="2">
+                        <div class="info-card">
+                            <h2>❤️ OFF-DUTY ACTIVITIES</h2>
+                            <div class="interests-grid">
+                                <div class="interest-item">
+                                    <div class="interest-icon">💻</div>
+                                    <h3>Coding & Development</h3>
+                                    <p>Building personal projects, contributing to open source, and exploring new technologies</p>
+                                </div>
+                                <div class="interest-item">
+                                    <div class="interest-icon">🚀</div>
+                                    <h3>Space & Technology</h3>
+                                    <p>Following space exploration missions, tech innovations, and scientific breakthroughs</p>
+                                </div>
+                                <div class="interest-item">
+                                    <div class="interest-icon">🎯</div>
+                                    <h3>Problem Solving</h3>
+                                    <p>Competitive programming, puzzle solving, and algorithm challenges</p>
+                                </div>
+                                <div class="interest-item">
+                                    <div class="interest-icon">🤝</div>
+                                    <h3>Collaboration</h3>
+                                    <p>Team projects, hackathons, and knowledge sharing with fellow developers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Mission Statement -->
+                    <div class="content-section" data-section="3">
+                        <div class="info-card">
+                            <h2>🎯 PRIMARY MISSION OBJECTIVES</h2>
+                            <div class="mission-statement">
+                                <blockquote>
+                                    "To push the boundaries of technological innovation through creative problem-solving, 
+                                    continuous learning, and collaborative development of solutions that make a positive 
+                                    impact on the digital frontier."
+                                </blockquote>
+                                <div class="mission-pillars">
+                                    <div class="pillar">
+                                        <div class="pillar-icon">💻</div>
+                                        <h3>INNOVATE</h3>
+                                        <p>Develop cutting-edge solutions using modern technologies</p>
+                                    </div>
+                                    <div class="pillar">
+                                        <div class="pillar-icon">🎓</div>
+                                        <h3>LEARN</h3>
+                                        <p>Continuously expand knowledge and skills in emerging fields</p>
+                                    </div>
+                                    <div class="pillar">
+                                        <div class="pillar-icon">❤️</div>
+                                        <h3>CONNECT</h3>
+                                        <p>Build meaningful collaborations in the tech community</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Side Navigation Panels -->
+        <div class="side-nav side-nav-left">
+            <button class="side-arrow" id="explore-left">
+                <span>‹</span>
+            </button>
+            <div class="nav-label">EXPLORE</div>
+        </div>
+
+        <div class="side-nav side-nav-right">
+            <button class="side-arrow" id="explore-right">
+                <span>›</span>
+            </button>
+            <div class="nav-label">EXPLORE</div>
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="bottom-nav">
+            <button id="return-hub" class="return-btn">
+                <span>‹</span> RETURN TO HUB
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="planet-script.js"></script>
+</body>
+</html>

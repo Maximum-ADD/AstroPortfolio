@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Adrian Draxl</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="planet-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="planet-page">
+    <!-- Starfield Background -->
+    <div id="starfield-1" class="starfield layer-1"></div>
+    <div id="starfield-2" class="starfield layer-2"></div>
+    <div id="starfield-3" class="starfield layer-3"></div>
+
+    <!-- Audio Controls -->
+    <div class="audio-controls">
+        <button id="audio-toggle" class="audio-btn">
+            <span id="audio-icon">🔊</span>
+        </button>
+    </div>
+
+    <!-- Sliding Doors -->
+    <div id="sliding-doors" class="doors active open">
+        <div class="door door-left"></div>
+        <div class="door door-right"></div>
+    </div>
+
+    <!-- Main Cockpit Frame -->
+    <div class="cockpit-frame">
+        <!-- Main Viewport -->
+        <div class="viewport">
+            <div class="planet-content">
+                <!-- Planet Header -->
+                <div class="planet-header">
+                    <div class="planet projects-planet">
+                        <div class="planet-highlight"></div>
+                        <div class="planet-icon">🚀</div>
+                    </div>
+                    <h1>PROJECTS PLANET</h1>
+                    <p>Mission Control & Development Log</p>
+                </div>
+
+                <!-- Mission Statistics -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Active Missions</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Lines of Code</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Development Cycle</div>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="content-container">
+                    <h2>🚀 CURRENT MISSIONS</h2>
+                    
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Quantum Calculator</h3>
+                                <div class="priority high">★ High</div>
+                            </div>
+                            <p>Advanced computational tool for quantum mechanics calculations and simulations.</p>
+                            <div class="project-status">
+                                <span class="status-label">Status:</span>
+                                <span class="status-value">Active Mission</span>
+                            </div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">WebGL</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="project-link">📁 Repository</button>
+                                <button class="project-link">🔗 Live Demo</button>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Neural Network Visualizer</h3>
+                                <div class="priority medium">★ Medium</div>
+                            </div>
+                            <p>Interactive platform for visualizing and understanding deep learning architectures.</p>
+                            <div class="project-status">
+                                <span class="status-label">Status:</span>
+                                <span class="status-value">Development Phase</span>
+                            </div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">D3.js</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="project-link">📁 Repository</button>
+                                <button class="project-link">🔗 Live Demo</button>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Space Station Manager</h3>
+                                <div class="priority low">★ Low</div>
+                            </div>
+                            <p>Resource management system for orbital platforms and space missions.</p>
+                            <div class="project-status">
+                                <span class="status-label">Status:</span>
+                                <span class="status-value">Planning Phase</span>
+                            </div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Three.js</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="project-link">📁 Repository</button>
+                                <button class="project-link">🔗 Live Demo</button>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3>Cosmic Data Pipeline</h3>
+                                <div class="priority medium">★ Medium</div>
+                            </div>
+                            <p>Automated data processing system for astronomical observations and analysis.</p>
+                            <div class="project-status">
+                                <span class="status-label">Status:</span>
+                                <span class="status-value">Research Phase</span>
+                            </div>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Apache Kafka</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="project-link">📁 Repository</button>
+                                <button class="project-link">🔗 Live Demo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mission Control Message -->
+                    <div class="mission-notice">
+                        <h2>📡 MISSION CONTROL TRANSMISSION</h2>
+                        <p>All projects shown are currently in development or planning phases. Each mission 
+                        represents a unique challenge in the vast expanse of computer science. GitHub 
+                        repositories and live demonstrations will be available as missions reach 
+                        operational status.</p>
+                        <div class="transmission-status">
+                            <strong>STATUS:</strong> All systems nominal. Continue mission parameters.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="bottom-nav">
+            <button id="return-hub" class="return-btn">
+                <span>‹</span> RETURN TO HUB
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="planet-script.js"></script>
+</body>
+</html>
