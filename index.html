@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrian Draxl - Space Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Starfield Background -->
+    <div id="starfield-1" class="starfield layer-1"></div>
+    <div id="starfield-2" class="starfield layer-2"></div>
+    <div id="starfield-3" class="starfield layer-3"></div>
+
+    <!-- Audio Controls -->
+    <div class="audio-controls">
+        <button id="audio-toggle" class="audio-btn">
+            <span id="audio-icon">🔊</span>
+        </button>
+    </div>
+
+    <!-- Sliding Doors -->
+    <div id="sliding-doors" class="doors">
+        <div class="door door-left"></div>
+        <div class="door door-right"></div>
+    </div>
+
+    <!-- Main Cockpit Frame -->
+    <div class="cockpit-frame">
+        <!-- Main Viewport -->
+        <div class="viewport">
+            <!-- Welcome Planet -->
+            <div class="planet-container">
+                <div class="planet welcome-planet">
+                    <div class="planet-highlight"></div>
+                </div>
+                <div class="welcome-text">
+                    <h1>Welcome</h1>
+                    <h2>ADRIAN DRAXL</h2>
+                    <p class="subtitle">COMPUTER SCIENCE STUDENT</p>
+                    <p class="location">Wits University</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Control Panel -->
+        <div class="navigation-panel">
+            <!-- Status Display -->
+            <div class="status-display">
+                <span>NAVIGATION SYSTEM</span>
+                <div class="status-light"></div>
+            </div>
+            
+            <!-- Navigation Grid -->
+            <div class="nav-grid">
+                <button class="nav-button" data-planet="about">
+                    <div class="nav-icon">👤</div>
+                    <div class="nav-label">ABOUT</div>
+                    <div class="nav-desc">Personal Info</div>
+                </button>
+                
+                <button class="nav-button" data-planet="projects">
+                    <div class="nav-icon">🚀</div>
+                    <div class="nav-label">PROJECTS</div>
+                    <div class="nav-desc">Mission Log</div>
+                </button>
+                
+                <button class="nav-button" data-planet="skills">
+                    <div class="nav-icon">⚙️</div>
+                    <div class="nav-label">SKILLS</div>
+                    <div class="nav-desc">Tech Arsenal</div>
+                </button>
+                
+                <button class="nav-button" data-planet="contact">
+                    <div class="nav-icon">📡</div>
+                    <div class="nav-label">CONTACT</div>
+                    <div class="nav-desc">Communication</div>
+                </button>
+            </div>
+            
+            <!-- System Status -->
+            <div class="system-status">
+                <span>SYSTEM STATUS: OPERATIONAL</span>
+                <div class="status-lights">
+                    <div class="status-light" style="animation-delay: 0s;"></div>
+                    <div class="status-light" style="animation-delay: 0.5s;"></div>
+                    <div class="status-light" style="animation-delay: 1s;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Side Navigation Panels - Desktop -->
+        <div class="side-nav side-nav-left">
+            <button class="side-arrow" id="look-left">
+                <span>‹</span>
+            </button>
+            <button class="side-arrow" id="return-hub">
+                <span>🏠</span>
+            </button>
+        </div>
+
+        <div class="side-nav side-nav-right">
+            <button class="side-arrow" id="look-right">
+                <span>›</span>
+            </button>
+            <button class="side-arrow" id="scan-planet">
+                <span>🔍</span>
+            </button>
+        </div>
+
+        <!-- Mobile Side Controls -->
+        <div class="mobile-controls">
+            <button class="side-arrow mobile-arrow" id="mobile-left">‹</button>
+            <button class="side-arrow mobile-arrow" id="mobile-hub">🏠</button>
+            <button class="side-arrow mobile-arrow" id="mobile-scan">🔍</button>
+            <button class="side-arrow mobile-arrow" id="mobile-right">›</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
