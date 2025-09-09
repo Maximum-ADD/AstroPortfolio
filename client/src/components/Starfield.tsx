@@ -33,12 +33,22 @@ export default function Starfield({
       star.style.width = size + 'px';
       star.style.height = size + 'px';
       
+      // Ensure stars are visible
+      star.style.position = 'absolute';
+      star.style.backgroundColor = 'white';
+      star.style.borderRadius = '50%';
+      star.style.pointerEvents = 'none';
+      star.style.zIndex = '2';
+      
       star.style.animationDelay = Math.random() * 3 + 's';
       star.style.animationDuration = (Math.random() * 2 + 2) + 's';
+      star.style.animationName = 'twinkle';
+      star.style.animationIterationCount = 'infinite';
+      star.style.animationTimingFunction = 'ease-in-out';
       
       container.appendChild(star);
     }
-  }, [starCount, sizeRange]);
+  }, [starCount, sizeRange, layer]);
 
   return (
     <div 
