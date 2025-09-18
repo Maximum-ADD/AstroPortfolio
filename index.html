@@ -9,10 +9,8 @@
 </head>
 <body>
     <!-- Starfield Background -->
-    <div id="starfield-1" class="starfield layer-1"></div>
-    <div id="starfield-2" class="starfield layer-2"></div>
-    <div id="starfield-3" class="starfield layer-3"></div>
-
+    
+    
     <!-- Audio Controls -->
     <div class="audio-controls">
         <button id="audio-toggle" class="audio-btn">
@@ -30,16 +28,17 @@
     <div class="cockpit-frame">
         <!-- Main Viewport -->
         <div class="viewport">
+            <canvas id="star-canvas"></canvas>
             <!-- Welcome Planet -->
             <div class="planet-container">
-                <div class="planet welcome-planet">
-                    <div class="planet-highlight"></div>
-                </div>
-                <div class="welcome-text">
-                    <h1>Welcome</h1>
-                    <h2>ADRIAN DRAXL</h2>
-                    <p class="subtitle">COMPUTER SCIENCE STUDENT</p>
-                    <p class="location">Wits University</p>
+                <div class="sun">
+                
+                    <div class="welcome-text">
+                        <h1>Welcome</h1>
+                        <h2>ADRIAN DRAXL</h2>
+                        <p class="subtitle">COMPUTER SCIENCE STUDENT</p>
+                        <p class="location">Wits University</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -90,34 +89,10 @@
             </div>
         </div>
 
-        <!-- Side Navigation Panels - Desktop -->
-        <div class="side-nav side-nav-left">
-            <button class="side-arrow" id="look-left">
-                <span>‹</span>
-            </button>
-            <button class="side-arrow" id="return-hub">
-                <span>🏠</span>
-            </button>
-        </div>
-
-        <div class="side-nav side-nav-right">
-            <button class="side-arrow" id="look-right">
-                <span>›</span>
-            </button>
-            <button class="side-arrow" id="scan-planet">
-                <span>🔍</span>
-            </button>
-        </div>
-
-        <!-- Mobile Side Controls -->
-        <div class="mobile-controls">
-            <button class="side-arrow mobile-arrow" id="mobile-left">‹</button>
-            <button class="side-arrow mobile-arrow" id="mobile-hub">🏠</button>
-            <button class="side-arrow mobile-arrow" id="mobile-scan">🔍</button>
-            <button class="side-arrow mobile-arrow" id="mobile-right">›</button>
-        </div>
     </div>
 
     <script src="javascriptFiles/script.js"></script>
+    <script src="javascriptFiles/stars.js"></script>
+
 </body>
 </html>
