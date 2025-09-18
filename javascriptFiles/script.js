@@ -8,40 +8,11 @@ class SpacePortfolio {
     }
 
     init() {
-        this.createStarfield();
         this.setupEventListeners();
         this.initAudioContext();
     }
 
-    // Create animated starfield
-    createStarfield() {
-        const layers = [
-            { id: 'starfield-1', count: 100, sizeRange: { min: 1, max: 2 } },
-            { id: 'starfield-2', count: 150, sizeRange: { min: 0.5, max: 1.5 } },
-            { id: 'starfield-3', count: 200, sizeRange: { min: 0.3, max: 1 } }
-        ];
-
-        layers.forEach(layer => {
-            const container = document.getElementById(layer.id);
-            container.innerHTML = '';
-
-            for (let i = 0; i < layer.count; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                
-                const size = Math.random() * (layer.sizeRange.max - layer.sizeRange.min) + layer.sizeRange.min;
-                star.style.width = size + 'px';
-                star.style.height = size + 'px';
-                
-                star.style.animationDelay = Math.random() * 3 + 's';
-                star.style.animationDuration = (Math.random() * 2 + 2) + 's';
-                
-                container.appendChild(star);
-            }
-        });
-    }
+    
 
     // Setup event listeners
     setupEventListeners() {
