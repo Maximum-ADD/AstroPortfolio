@@ -18,7 +18,7 @@ for (let i = 0; i< 100; i++){
         speedx: (Math.random() * 0.1) * plusOrMinus,
         speedy: (Math.random() * 0.1) * plusOrMinus,
         opacityAngle: Math.random()*Math.PI*2,
-        opacitySpeed: Math.random() * 0.5 + 0.01,
+        opacitySpeed: Math.random() * 0.1 + 0.01,
         opacity: 1
  });
 }
@@ -53,3 +53,8 @@ function drawStars() {
 }
 
 drawStars();
+
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
