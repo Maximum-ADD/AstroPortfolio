@@ -9,11 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body class="planet-page">
-    <!-- Starfield Background -->
-    <div id="starfield-1" class="starfield layer-1"></div>
-    <div id="starfield-2" class="starfield layer-2"></div>
-    <div id="starfield-3" class="starfield layer-3"></div>
-
     <!-- Audio Controls -->
     <div class="audio-controls">
         <button id="audio-toggle" class="audio-btn">
@@ -31,6 +26,9 @@
     <div class="cockpit-frame">
         <!-- Main Viewport -->
         <div class="viewport">
+               <canvas id="star-canvas"></canvas>
+
+
             <div class="planet-content">
                 <!-- Planet Header -->
                 <div class="planet-header">
@@ -198,7 +196,9 @@
         </div>
     </div>
 
+
     <script src="javascriptFiles/script.js"></script>
+    <script src="javascriptFiles/stars.js"></script>
     <script src="javascriptFiles/planet-script.js"></script>
 </body>
 </html>

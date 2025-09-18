@@ -10,9 +10,6 @@
 </head>
 <body class="planet-page">
     <!-- Starfield Background -->
-    <div id="starfield-1" class="starfield layer-1"></div>
-    <div id="starfield-2" class="starfield layer-2"></div>
-    <div id="starfield-3" class="starfield layer-3"></div>
 
     <!-- Audio Controls -->
     <div class="audio-controls">
@@ -31,6 +28,7 @@
     <div class="cockpit-frame">
         <!-- Main Viewport -->
         <div class="viewport">
+            <canvas id = "star-canvas"></canvas>
             <div class="planet-content">
                 <!-- Planet Header -->
                 <div class="planet-header">
@@ -232,6 +230,7 @@
     </div>
 
     <script src="javascriptFiles/script.js"></script>
+    <script src = "javascriptFiles/stars.js"></script>
     <script src="javascriptFiles/planet-script.js"></script>
 </body>
 </html>
