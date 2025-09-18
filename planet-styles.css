@@ -1,8 +1,14 @@
 /* Planet-specific styles for individual pages */
 
 /* Planet Page Layout */
+
 .planet-page {
     overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.planet-page::-webkit-scrollbar{
+    display:none;
 }
 
 .planet-content {
@@ -12,6 +18,9 @@
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+}
+.planet-content::-webkit-scrollbar{
+    display:none;
 }
 
 /* Planet Header */

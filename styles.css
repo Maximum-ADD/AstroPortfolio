@@ -1,4 +1,4 @@
-/* CSS Variables for Space Theme */
+/* CSS Variables for gradients. thanks AI I didn't know this is how it worked! do we need so man forregrounds though? */
 :root {
     --background: hsl(222, 84%, 5%);
     --foreground: hsl(210, 40%, 98%);
@@ -22,26 +22,26 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     font-family: 'Inter', sans-serif;
     background: var(--background);
     color: var(--foreground);
-    overflow: hidden;
+    
+    /* remove scrollbar!! */
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
     height: 100vh;
     position: relative;
 }
 
-/* Space-themed Animations */
-@keyframes twinkle {
-    0%, 100% { 
-        opacity: 0.3; 
-        transform: scale(1); 
-    }
-    50% { 
-        opacity: 1; 
-        transform: scale(1.2); 
-    }
+body::-webkit-scrollbar {
+    display: none;
 }
+
+/* Space-themed Animations */
+
 
 @keyframes rotate {
     from { transform: rotate(0deg); }
@@ -50,12 +50,27 @@ body {
 
 @keyframes pulse-glow {
     0%, 100% { 
-        box-shadow: 0 0 60px rgba(255, 107, 53, 0.6), inset -20px -20px 40px rgba(0, 0, 0, 0.3); 
+        box-shadow: 
+        0 0 125px rgba(255, 200, 0, 0.8),
+        0 0 175px rgba(255, 107, 53, 1);
+         
     }
     50% { 
-        box-shadow: 0 0 80px rgba(255, 107, 53, 0.8), inset -20px -20px 40px rgba(0, 0, 0, 0.2); 
+        box-shadow: 
+        0 0 100px rgba(255, 200, 0, 1),
+        0 0 200px rgba(255, 107, 53, 0.9); 
+        
     }
 }
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.95;
+  }
+}
+
 
 @keyframes blink {
     0%, 50% { opacity: 1; }
@@ -88,33 +103,15 @@ body {
 }
 
 /* Starfield Background */
-.starfield {
+
+#star-canvas{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 1;
-}
-
-.starfield.layer-1 { 
-    animation: parallax-1 20s infinite linear; 
-}
-
-.starfield.layer-2 { 
-    animation: parallax-2 30s infinite linear; 
-}
-
-.starfield.layer-3 { 
-    animation: parallax-3 40s infinite linear; 
-}
-
-.star {
-    position: absolute;
-    background: white;
-    border-radius: 50%;
-    animation: twinkle 3s infinite ease-in-out;
+    z-index: 10;
 }
 
 /* Audio Controls */
@@ -191,23 +188,42 @@ body {
 .cockpit-frame {
     position: relative;
     width: 100%;
-    height: 100vh;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     z-index: 10;
     background: linear-gradient(135deg, var(--background) 0%, var(--muted) 50%, var(--background) 100%);
+
 }
 
 /* Viewport */
 .viewport {
-    flex: 1;
+    flex:0 0 auto ;
+    height:600px;
     margin: 20px;
+    padding: 25px;
     border: 4px solid var(--muted);
     border-radius: 24px;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
+    scrollbar-width: none;
     background: linear-gradient(180deg, var(--background) 0%, hsl(235, 39%, 15%) 100%);
-    box-shadow: inset 0 0 50px rgba(0, 212, 255, 0.1), 0 0 100px rgba(255, 107, 53, 0.2);
+    box-shadow: inset 0 0 50px rgba(0, 212, 255, 0.1)/*, 0 0 100px rgba(255, 107, 53, 0.2)*/;
+    
+}
+
+.veiwport-homepage{
+    height:400;
+    flex:0 0 auto ;
+    margin: 20px;
+    padding: 25px;
+    border: 4px solid var(--muted);
+    border-radius: 24px;
+    position: relative;
+    overflow: auto;
+    scrollbar-width: none;
+    background: linear-gradient(180deg, var(--background) 0%, hsl(235, 39%, 15%) 100%);
+    box-shadow: inset 0 0 50px rgba(0, 212, 255, 0.1)/*, 0 0 100px rgba(255, 107, 53, 0.2)*/;
 }
 
 /* Planet Container */
@@ -229,9 +245,23 @@ body {
     box-shadow: 
         0 0 60px rgba(255, 107, 53, 0.6),
         inset -20px -20px 40px rgba(0, 0, 0, 0.3);
-    animation: rotate 20s infinite linear, pulse-glow 4s infinite ease-in-out;
+    animation: rotate 20s infinite linear;
     position: relative;
     margin: 0 auto 30px;
+}
+.sun{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    box-shadow: 
+        
+        0 0 60px rgba(247, 255, 159, 0.84),
+        inset -20px -20px 40px rgba(0, 0, 0, 0.3);
+    animation:  pulse-glow 3s infinite, flicker 0.15s infinite;
+    position: relative;
+    margin: 0 auto 30px;
+    
 }
 
 .planet-highlight {
@@ -277,6 +307,7 @@ body {
 
 /* Navigation Panel */
 .navigation-panel {
+    flex: 1;
     background: var(--card);
     border: 2px solid var(--border);
     border-radius: 12px;
@@ -444,7 +475,7 @@ body {
     background: var(--secondary);
     color: var(--background);
     transform: scale(1.1);
-}
+} 
 
 /* Responsive Design */
 @media (max-width: 768px) {
