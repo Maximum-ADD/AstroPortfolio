@@ -514,6 +514,10 @@ body::-webkit-scrollbar {
         width: 150px;
         height: 150px;
     }
+    .sun{
+        width: 300px;
+        height: 300px;
+    }
     
     .side-nav {
         display:flex;
@@ -555,6 +559,10 @@ body::-webkit-scrollbar {
     .planet {
         width: 120px;
         height: 120px;
+    }
+    .sun{
+        width: 250px;
+        height: 250px;
     }
     .side-nav-left {
         left: 1;
