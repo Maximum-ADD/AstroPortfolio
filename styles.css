@@ -430,7 +430,7 @@ body::-webkit-scrollbar {
     background: var(--card);
     border: 2px solid var(--border);
     border-radius: 12px;
-    padding: 10px;
+    padding: 5px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     z-index: 30;
     overflow: hidden;
@@ -564,8 +564,9 @@ body::-webkit-scrollbar {
         width: 250px;
         height: 250px;
     }
+
     .side-nav-left {
-        left: 1;
+        left: 1%S;
     }
 
     .side-nav-right {
