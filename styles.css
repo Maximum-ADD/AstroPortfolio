@@ -278,7 +278,10 @@ body::-webkit-scrollbar {
     animation:  pulse-glow 5s infinite, flicker 0.15s infinite;
     position: relative;
     margin: 0 auto 30px;
-        align-content: center;
+    align-content: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
 
 }
 
@@ -286,6 +289,7 @@ body::-webkit-scrollbar {
 /* H1: Main Title */
 .welcome-text{
     align-content: center;
+    z-index:1;
 }
 .welcome-text h1 {
     font-family: 'Orbitron', sans-serif;
