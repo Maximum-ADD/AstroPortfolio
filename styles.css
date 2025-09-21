@@ -51,14 +51,14 @@ body::-webkit-scrollbar {
 @keyframes pulse-glow {
     0%, 100% { 
         box-shadow: 
-        0 0 125px rgba(255, 200, 0, 0.8),
+        0 0 150px rgba(255, 200, 0, 0.8),
         0 0 175px rgba(255, 107, 53, 1);
          
     }
     50% { 
         box-shadow: 
-        0 0 100px rgba(255, 200, 0, 1),
-        0 0 200px rgba(255, 107, 53, 0.9); 
+        0 0 200px rgba(255, 200, 0, 1),
+        0 0 150px rgba(255, 107, 53, 0.9); 
         
     }
 }
@@ -189,6 +189,8 @@ body::-webkit-scrollbar {
     position: relative;
     width: 100%;
     overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     display: flex;
     flex-direction: column;
     z-index: 10;
@@ -249,20 +251,8 @@ body::-webkit-scrollbar {
     position: relative;
     margin: 0 auto 30px;
 }
-.sun{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: linear-gradient(45deg, var(--primary), var(--accent));
-    box-shadow: 
-        
-        0 0 60px rgba(247, 255, 159, 0.84),
-        inset -20px -20px 40px rgba(0, 0, 0, 0.3);
-    animation:  pulse-glow 3s infinite, flicker 0.15s infinite;
-    position: relative;
-    margin: 0 auto 30px;
-    
-}
+
+
 
 .planet-highlight {
     position: absolute;
@@ -275,34 +265,60 @@ body::-webkit-scrollbar {
     transform: rotate(-15deg);
 }
 
+
+.sun{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary), var(--accent));
+    box-shadow: 
+        
+        0 0 60px rgba(247, 255, 159, 0.84),
+        inset -20px -20px 40px rgba(0, 0, 0, 0.3);
+    animation:  pulse-glow 5s infinite, flicker 0.15s infinite;
+    position: relative;
+    margin: 0 auto 30px;
+        align-content: center;
+
+}
+
 /* Welcome Text */
+/* H1: Main Title */
+.welcome-text{
+    align-content: center;
+}
 .welcome-text h1 {
-    font-family: 'Orbitron', monospace;
-    font-size: 4rem;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 16px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #000000; /* White for highest contrast */
+    text-shadow: 0 0 10px #00ffff; /* Cyan glow */
+    margin-bottom: 10px;
 }
 
+/* H2: Name */
 .welcome-text h2 {
-    font-family: 'Orbitron', monospace;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--foreground);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    color: #66fcf1; /* Neon teal */
+    text-shadow: 0 0 6px #111413;
     margin-bottom: 8px;
 }
 
+/* Subtitle: Degree */
 .welcome-text .subtitle {
-    font-family: 'Orbitron', monospace;
-    font-size: 1.2rem;
-    color: var(--muted-foreground);
-    margin-bottom: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #070b0b; /* Warm yellow-cream */
+    text-shadow: 0 0 5px rgba(42, 244, 255, 0.6);
+    margin-bottom: 4px;
 }
 
+/* Location: Wits */
 .welcome-text .location {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    color: var(--muted-foreground);
+    color:  #0e0505; /* Soft neutral grey-white */
+    text-shadow: 0 0 4px rgba(241, 240, 240, 0.4);
 }
 
 /* Navigation Panel */
@@ -405,22 +421,24 @@ body::-webkit-scrollbar {
 /* Side Navigation */
 .side-nav {
     position: absolute;
-    top: 50%;
+    top: 93%;
     transform: translateY(-50%);
     background: var(--card);
     border: 2px solid var(--border);
     border-radius: 12px;
-    padding: 16px;
+    padding: 10px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     z-index: 30;
+    overflow: hidden;
 }
 
 .side-nav-left {
-    left: 20px;
+    left: 25%;
+    
 }
 
 .side-nav-right {
-    right: 20px;
+    right: 25%;
 }
 
 .side-arrow {
@@ -430,13 +448,14 @@ body::-webkit-scrollbar {
     width: 48px;
     height: 48px;
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: center;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-bottom: 8px;
     font-size: 18px;
     color: var(--foreground);
+    padding: 15px;
 }
 
 .side-arrow:hover {
@@ -493,9 +512,15 @@ body::-webkit-scrollbar {
     }
     
     .side-nav {
-        display: none;
+        display:flex;
     }
-    
+    .side-nav-left {
+        left: 15%;
+    }
+
+    .side-nav-right {
+        right:15%;
+    }
     .mobile-controls {
         display: flex;
     }
@@ -526,5 +551,12 @@ body::-webkit-scrollbar {
     .planet {
         width: 120px;
         height: 120px;
+    }
+    .side-nav-left {
+        left: 1;
+    }
+
+    .side-nav-right {
+        right:1%;
     }
 }
