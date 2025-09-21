@@ -505,8 +505,8 @@
 
 .skills-grid {
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* flex-direction: column; */
     gap: 16px;
 }
 
@@ -519,6 +519,7 @@
 .skill-header {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     margin-bottom: 8px;
 }
