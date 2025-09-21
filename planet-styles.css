@@ -168,6 +168,14 @@
     color: var(--muted-foreground);
     margin: 0;
 }
+.info-details li {
+    color: var(--muted-foreground);
+    margin-bottom: 12px;
+}
+.info-details ol {
+    color: var(--muted-foreground);
+    padding-left:2em;
+}
 
 /* Education Timeline */
 .education-timeline {
@@ -259,6 +267,10 @@
     font-size: 1.125rem;
     line-height: 1.6;
     color: var(--card-foreground);
+    
+}
+.mission-statement p{
+    margin-bottom: 12px;
 }
 
 .mission-pillars {
@@ -493,14 +505,15 @@
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    flex-direction: column;
     gap: 16px;
 }
 
 .skill-item {
     background: rgba(var(--muted), 0.3);
     border-radius: 8px;
-    padding: 16px;
+    padding: 15px;
 }
 
 .skill-header {
@@ -513,12 +526,14 @@
 .skill-name {
     font-family: 'Orbitron', monospace;
     font-weight: 600;
-    color: var(--foreground);
+    color: var(--primary);
+    padding: 15px;
 }
 
 .skill-status {
     font-family: 'Orbitron', monospace;
     font-size: 0.75rem;
+    padding: 25px;
 }
 
 .skill-status.operational {
@@ -533,85 +548,10 @@
     color: var(--primary);
 }
 
-.skill-bar {
-    width: 100%;
-    height: 8px;
-    background: var(--border);
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 8px;
-}
 
-.skill-progress {
-    height: 100%;
-    background: var(--secondary);
-    transition: width 1s ease-out;
-    border-radius: 4px;
-}
 
-.skill-percentage {
-    text-align: right;
-    font-size: 0.875rem;
-    color: var(--muted-foreground);
-}
 
-/* Arsenal Overview */
-.arsenal-overview {
-    background: rgba(var(--card), 0.5);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px;
-}
 
-.arsenal-overview h2 {
-    font-family: 'Orbitron', monospace;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--foreground);
-    margin-bottom: 20px;
-}
-
-.overview-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 16px;
-    margin-bottom: 20px;
-}
-
-.overview-stat {
-    text-align: center;
-}
-
-.overview-stat .stat-number {
-    font-family: 'Orbitron', monospace;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--secondary);
-    margin-bottom: 4px;
-}
-
-.overview-stat:nth-child(2) .stat-number {
-    color: var(--accent);
-}
-
-.overview-stat:nth-child(3) .stat-number {
-    color: var(--primary);
-}
-
-.overview-stat:nth-child(4) .stat-number {
-    color: #ef4444;
-}
-
-.overview-stat .stat-label {
-    font-size: 0.875rem;
-    color: var(--muted-foreground);
-}
-
-.arsenal-overview p {
-    color: var(--card-foreground);
-    line-height: 1.6;
-}
 
 /* Contact Styles */
 .contact-section {
@@ -843,6 +783,7 @@
     color: var(--muted-foreground);
     text-align: center;
     margin-top: 8px;
+    
 }
 
 /* Responsive Design */
