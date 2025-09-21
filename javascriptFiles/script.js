@@ -30,16 +30,28 @@ class SpacePortfolio {
         });
 
         // Side navigation arrows
-        document.getElementById('look-left').addEventListener('click', () => this.handleSideAction('lookLeft'));
-        document.getElementById('look-right').addEventListener('click', () => this.handleSideAction('lookRight'));
-        document.getElementById('return-hub').addEventListener('click', () => this.handleSideAction('returnToHub'));
-        document.getElementById('scan-planet').addEventListener('click', () => this.handleSideAction('scanPlanet'));
+        const lookLeft = document.getElementById('look-left')
+        if (lookLeft) lookLeft.addEventListener('click', () => this.handleSideAction('lookLeft'));
+
+        const lookRight = document.getElementById('look-right')
+        if (lookRight) lookRight.addEventListener('click', () => this.handleSideAction('lookRight'));        
+        const returnHub = document.getElementById('return-hub')
+        if (returnHub) returnHub.addEventListener('click', () => this.handleSideAction('returnToHub'));
+        const scanPlanet = document.getElementById('scan-planet');
+        if (scanPlanet) scanPlanet.addEventListener('click', () => this.handleSideAction('scanPlanet'));
 
         // Mobile controls
-        document.getElementById('mobile-left').addEventListener('click', () => this.handleSideAction('lookLeft'));
-        document.getElementById('mobile-right').addEventListener('click', () => this.handleSideAction('lookRight'));
-        document.getElementById('mobile-hub').addEventListener('click', () => this.handleSideAction('returnToHub'));
-        document.getElementById('mobile-scan').addEventListener('click', () => this.handleSideAction('scanPlanet'));
+        const mobileLeft = document.getElementById('mobile-left');
+        if (mobileLeft) mobileLeft.addEventListener('click', () => this.handleSideAction('lookLeft'));
+
+        const mobileRight = document.getElementById('mobile-right');
+        if (mobileRight) mobileRight.addEventListener('click', () => this.handleSideAction('lookRight'));
+
+       const mobileHub = document.getElementById('mobile-hub');
+        if (mobileHub) mobileHub.addEventListener('click', () => this.handleSideAction('returnToHub'));
+
+        const mobileScan = document.getElementById('mobile-scan');
+        if (mobileScan) mobileScan.addEventListener('click', () => this.handleSideAction('scanPlanet'));
 
         // Add ripple effect to navigation buttons
         navButtons.forEach(button => {
@@ -51,8 +63,11 @@ class SpacePortfolio {
     initAudioContext() {
         document.addEventListener('click', () => {
             if (!this.audioContext) {
-                this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                this.audioContext = new (window.AudioContext || window.AudioContext)();
             }
+            if (this.audioContext.state === 'suspended') {
+            this.audioContext.resume();
+            }   
         }, { once: true });
     }
 
@@ -78,6 +93,7 @@ class SpacePortfolio {
         } catch (error) {
             console.warn('Sound generation failed:', error);
         }
+        console.log("AudioContext state:", this.audioContext.state);
     }
 
     // Play different sound effects
@@ -206,9 +222,9 @@ style.textContent = `
 document.head.appendChild(style);
 
 // Initialize the space portfolio when the page loads
-document.addEventListener('DOMContentLoaded', () => {
-    new SpacePortfolio();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     new SpacePortfolio();
+// });
 
 // Add hover sound effects
 document.addEventListener('DOMContentLoaded', () => {
