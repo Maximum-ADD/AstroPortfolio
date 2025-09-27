@@ -238,7 +238,41 @@ body::-webkit-scrollbar {
     text-align: center;
     z-index: 20;
 }
-
+.orbit-container {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    overflow: visible;
+    z-index:20;
+}
+.orbiting-object {
+    width: 40;
+    height: 40;
+    border-radius: 50;
+    background:red;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    animation: orbit 4s ease-in-out infinite;
+}
+@keyframes orbit{
+    0% {
+    transform: translateX(100px) scale(0.6);
+    }
+    25% {
+    transform: translateX(0px) scale(1);
+    }
+    50% {
+    transform: translateX(-100px) scale(1.2);
+    }
+    75% {
+    transform: translateX(0px) scale(1);
+    }
+    100% {
+    transform: translateX(100px) scale(0.6);
+    }
+}
 /* Planet */
 .planet {
     width: 200px;
@@ -285,7 +319,9 @@ body::-webkit-scrollbar {
     align-items: center; 
 
 }
-
+.planet.orbit {
+    animation: orbit 3s infinite;
+}
 /* Welcome Text */
 /* H1: Main Title */
 .welcome-text{
